@@ -13,8 +13,7 @@ class App extends React.Component {
   };
   
   handleCity = e => {
-    e.preventDefault()
-    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=43c0f116b91eccd6601d20c2b247d848`;
+    const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=43c0f116b91eccd6601d20c2b247d848&units=metric`;
   
     fetch(API)
     .then(response => {
@@ -32,13 +31,13 @@ class App extends React.Component {
   handleInputChange = (e) => {
     this.setState({
       value: e.target.value
-    })
+    }, this.handleCity)
   }
 
   render() {
     return (
       <div className="App">
-        <Form value={this.state.value} change={this.handleInputChange} submit={this.handleCity} />
+        <Form value={this.state.value} change={this.handleInputChange} />
         <Random />
       </div>
     );
