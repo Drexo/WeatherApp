@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import Random from './Random';
-import './App.css';
+import './App.scss';
 
 // api key
 const ApiKey = '43c0f116b91eccd6601d20c2b247d848'

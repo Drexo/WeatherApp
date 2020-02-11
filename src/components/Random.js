@@ -3,7 +3,7 @@ import React from 'react';
 const Random = props => {
 
     const {err, city, temp, country} = props.weather
-
+/*
     let content = null;
     if(!err && city){
         content = (
@@ -20,6 +20,14 @@ const Random = props => {
             </div>
         </>
     )
+    */
+   return (
+    <>
+        <div className="result">
+                <em>{`CURRENTLY IN ${city}, ${country}, IT'S`}</em>
+        </div>
+    </>
+)
 }
 
 export default Random
